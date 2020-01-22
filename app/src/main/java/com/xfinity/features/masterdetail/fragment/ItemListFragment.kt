@@ -11,7 +11,7 @@ import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.xfinity.MVVMApplication
+import com.xfinity.NewsApplication
 import com.xfinity.R
 import com.xfinity.databinding.FragmentItemListBinding
 import com.xfinity.features.masterdetail.NewsListViewModel
@@ -46,7 +46,7 @@ class ItemListFragment : Fragment() {
         val configPersistentComponent: ConfigPersistentComponent
         if (componentsArray.get(activityId) == null) {
             configPersistentComponent = DaggerConfigPersistentComponent.builder()
-                    .appComponent(MVVMApplication[activity!!.applicationContext].component)
+                    .appComponent(NewsApplication[activity!!.applicationContext].component)
                     .build()
             componentsArray.put(activityId, configPersistentComponent)
         } else {

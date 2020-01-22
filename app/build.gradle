@@ -21,12 +21,8 @@ android {
         }
     }
     productFlavors {
-        simpsonsviewer {
-            applicationId "com.xfinity.simpsonsviewer"
-        }
-
-        wireviewer {
-            applicationId "com.xfinity.wireviewer"
+        newsviewer {
+            applicationId "com.xfinity.newsviewer"
         }
     }
     compileOptions {
