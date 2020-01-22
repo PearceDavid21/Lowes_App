@@ -81,17 +81,12 @@ class MainActivity : AppCompatActivity() {
         if (findViewById<View>(R.id.framelayout_right) != null)
             containerViewId = R.id.framelayout_right
 
-        /*val bundle = Bundle()
-        event.characterName.value?.let { name ->
-            bundle.putString(ITEM, name)
-        }
-        event.characterImage.value?.let { url ->
-            bundle.putString(ICON, url)
-        }*/
+        val bundle = Bundle()
+        bundle.putString("URL", url)
 
         val itemDetailFragment = ItemDetailFragment()
         itemDetailFragment.retainInstance = true
-        //itemDetailFragment.arguments = bundle
+        itemDetailFragment.arguments = bundle
         fragmentTransaction.replace(containerViewId, itemDetailFragment)
 
         if (findViewById<View>(R.id.framelayout_right) == null)
