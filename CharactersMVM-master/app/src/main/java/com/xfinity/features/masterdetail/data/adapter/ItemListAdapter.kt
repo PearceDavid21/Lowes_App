@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import com.xfinity.R
 import com.xfinity.data.model.response.Article
 import com.xfinity.databinding.ItemDetailBinding
-import com.xfinity.features.masterdetail.CharacterViewModel
+import com.xfinity.features.masterdetail.ArticleViewModel
 
 class ItemListAdapter : RecyclerView.Adapter<ItemListAdapter.ItemViewHolder>() {
     private var items: List<Article> = ArrayList()
@@ -31,7 +31,7 @@ class ItemListAdapter : RecyclerView.Adapter<ItemListAdapter.ItemViewHolder>() {
     }
 
     class ItemViewHolder(private val binding: ItemDetailBinding) : RecyclerView.ViewHolder(binding.root) {
-        private val characterViewModel = CharacterViewModel()
+        private val characterViewModel = ArticleViewModel()
 
         fun bind(character: Article) {
             characterViewModel.bind(character)

@@ -5,7 +5,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.xfinity.features.masterdetail.CharacterViewModel" />
+            type="com.xfinity.features.masterdetail.ArticleViewModel" />
     </data>
 
     <android.support.constraint.ConstraintLayout

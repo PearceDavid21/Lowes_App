@@ -1,17 +1,17 @@
 package com.xfinity.data
 
 import com.xfinity.data.model.response.Article
-import com.xfinity.data.remote.CharactersService
+import com.xfinity.data.remote.NewsService
 import io.reactivex.Single
 import javax.inject.Inject
 import javax.inject.Singleton
 
 @Singleton
 class DataManager @Inject
-constructor(private val charactersService: CharactersService) {
+constructor(private val newsService: NewsService) {
 
     fun getNewsHeadlines(country:String): Single<List<Article>> {
-        return charactersService.getNews(country, apiKey).map {
+        return newsService.getNews(country, apiKey).map {
             it.articles
         }
     }

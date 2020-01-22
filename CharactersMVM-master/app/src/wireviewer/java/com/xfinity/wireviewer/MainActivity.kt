@@ -7,7 +7,6 @@ import android.support.v7.widget.Toolbar
 import android.view.Menu
 import android.view.View
 import com.xfinity.R
-import com.xfinity.features.masterdetail.CharacterViewModel
 import com.xfinity.features.masterdetail.fragment.ItemDetailFragment
 import com.xfinity.features.masterdetail.fragment.ItemListFragment
 import org.greenrobot.eventbus.EventBus

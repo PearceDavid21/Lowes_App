@@ -14,7 +14,7 @@ import android.view.ViewGroup
 import com.xfinity.MVVMApplication
 import com.xfinity.R
 import com.xfinity.databinding.FragmentItemListBinding
-import com.xfinity.features.masterdetail.CharacterListViewModel
+import com.xfinity.features.masterdetail.NewsListViewModel
 import com.xfinity.injection.component.ConfigPersistentComponent
 import com.xfinity.injection.component.DaggerConfigPersistentComponent
 import com.xfinity.injection.module.FragmentModule
@@ -30,7 +30,7 @@ class ItemListFragment : Fragment() {
 
     @Inject
     lateinit var viewModelFactory: ViewModelFactory
-    lateinit var characterViewModel: CharacterListViewModel
+    lateinit var newsViewModel: NewsListViewModel
 
     private var errorSnackBar: Snackbar? = null
 
@@ -57,15 +57,15 @@ class ItemListFragment : Fragment() {
 
         fragmentComponent.inject(this)
 
-        characterViewModel = ViewModelProviders.of(this, viewModelFactory).get(CharacterListViewModel::class.java)
-        characterViewModel.errorMessage.observe(this, Observer {errorMessage ->
+        newsViewModel = ViewModelProviders.of(this, viewModelFactory).get(NewsListViewModel::class.java)
+        newsViewModel.errorMessage.observe(this, Observer { errorMessage ->
             if (errorMessage != null) {
                 showError(errorMessage)
             } else {
                 hideError()
             }
         })
-        binding!!.viewModel = characterViewModel
+        binding!!.viewModel = newsViewModel
     }
 
     private fun hideError() {
@@ -74,7 +74,7 @@ class ItemListFragment : Fragment() {
 
     private fun showError(errorMessage: Int) {
         errorSnackBar = Snackbar.make(binding!!.root, errorMessage, Snackbar.LENGTH_INDEFINITE)
-        errorSnackBar!!.setAction(R.string.retry, characterViewModel.errorClickListener)
+        errorSnackBar!!.setAction(R.string.retry, newsViewModel.errorClickListener)
         errorSnackBar!!.show()
     }
 

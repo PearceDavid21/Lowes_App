@@ -1,6 +1,6 @@
 package com.xfinity.injection.module
 
-import com.xfinity.data.remote.CharactersService
+import com.xfinity.data.remote.NewsService
 
 import javax.inject.Singleton
 
@@ -13,8 +13,8 @@ class ApiModule {
 
     @Provides
     @Singleton
-    internal fun provideAngelApi(retrofit: Retrofit): CharactersService {
-        return retrofit.create(CharactersService::class.java)
+    internal fun provideAngelApi(retrofit: Retrofit): NewsService {
+        return retrofit.create(NewsService::class.java)
     }
 
 }

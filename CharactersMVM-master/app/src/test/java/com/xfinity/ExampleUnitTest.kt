@@ -2,8 +2,8 @@ package com.xfinity
 
 import android.arch.core.executor.testing.InstantTaskExecutorRule
 import com.xfinity.data.DataManager
-import com.xfinity.data.remote.CharactersService
-import com.xfinity.features.masterdetail.CharacterListViewModel
+import com.xfinity.data.remote.NewsService
+import com.xfinity.features.masterdetail.NewsListViewModel
 import io.reactivex.Single.just
 /*import duponchel.nicolas.rxbasics.MainViewModel.InstallationStatus.SUCCESS
 import duponchel.nicolas.rxbasics.MainViewModel.LoadingStatus.LOADING
@@ -35,9 +35,9 @@ class ExampleUnitTest {
     val rxSchedulerRule = RxSchedulerRule()
 
     @Mock
-    private lateinit var  charactersService: CharactersService
+    private lateinit var  newsService: NewsService
 
-    val viewmodel by lazy { CharacterListViewModel(DataManager(charactersService)) }
+    val viewmodel by lazy { NewsListViewModel(DataManager(newsService)) }
 
     @Test
     fun `init set joke list to empty`() {
