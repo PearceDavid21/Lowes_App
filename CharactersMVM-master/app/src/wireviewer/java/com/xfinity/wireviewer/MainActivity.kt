@@ -66,7 +66,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     @Subscribe(threadMode = ThreadMode.MAIN)
-    fun onMessageEvent(event: CharacterViewModel) {/* Do something */
+    fun onMessageEvent(url: String) {
+        println("_xyz $url")
         val fragmentManager = supportFragmentManager
 
         val fragmentTransaction = fragmentManager.beginTransaction()

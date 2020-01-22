@@ -2,8 +2,6 @@ package com.xfinity
 
 import android.arch.core.executor.testing.InstantTaskExecutorRule
 import com.xfinity.data.DataManager
-import com.xfinity.data.model.response.Icon
-import com.xfinity.data.model.response.RelatedTopic
 import com.xfinity.data.remote.CharactersService
 import com.xfinity.features.masterdetail.CharacterListViewModel
 import io.reactivex.Single.just

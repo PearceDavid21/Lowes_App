@@ -2,18 +2,14 @@ package com.xfinity.features.masterdetail
 
 import android.arch.lifecycle.MutableLiveData
 import android.arch.lifecycle.ViewModel
-import android.support.v7.widget.SearchView
 import android.view.View
-import com.jakewharton.rxbinding.support.v7.widget.RxSearchView
 import com.xfinity.R
 import com.xfinity.data.DataManager
 import com.xfinity.data.model.response.Article
-import com.xfinity.data.model.response.RelatedTopic
 import com.xfinity.features.masterdetail.data.adapter.ItemListAdapter
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
-import java.util.concurrent.TimeUnit
 
 class CharacterListViewModel(private val dataManager: DataManager) : ViewModel() {
     private val disposables: CompositeDisposable = CompositeDisposable()

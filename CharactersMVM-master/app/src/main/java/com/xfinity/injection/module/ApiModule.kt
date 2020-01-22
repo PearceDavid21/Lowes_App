@@ -8,7 +8,7 @@ import dagger.Module
 import dagger.Provides
 import retrofit2.Retrofit
 
-@Module(includes = arrayOf(NetworkModule::class))
+@Module(includes = [NetworkModule::class])
 class ApiModule {
 
     @Provides

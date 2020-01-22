@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.xfinity.R
 import com.xfinity.data.model.response.Article
-import com.xfinity.data.model.response.RelatedTopic
 import com.xfinity.databinding.ItemDetailBinding
 import com.xfinity.features.masterdetail.CharacterViewModel
 

@@ -7,7 +7,7 @@ import com.xfinity.injection.module.FragmentModule
 import dagger.Component
 
 @ConfigPersistent
-@Component(dependencies = arrayOf(AppComponent::class))
+@Component(dependencies = [AppComponent::class])
 interface ConfigPersistentComponent {
 
     fun activityComponent(activityModule: ActivityModule): ActivityComponent

@@ -14,7 +14,7 @@ import javax.inject.Singleton
 
 import com.xfinity.util.PreferenceHelper.Companion.PREF_FILE_NAME
 
-@Module(includes = arrayOf(ApiModule::class))
+@Module(includes = [ApiModule::class])
 class AppModule(private val application: Application) {
 
     @Provides
