@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">News Application</string>
+    <string name="api_url">https://newsapi.org/v2/</string>
+    <string name="search_query">USA</string>
+</resources>
